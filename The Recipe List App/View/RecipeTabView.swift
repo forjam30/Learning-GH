@@ -11,7 +11,7 @@ struct RecipeTabView: View {
     @State var tabIndex = 0
     var body: some View {
         TabView(selection: $tabIndex){
-            Text("Featured")
+            RecipeFeaturedView()
                 .tabItem{
             VStack{
                Image(systemName: "star")
@@ -30,7 +30,7 @@ struct RecipeTabView: View {
         }
             
             
-        }
+        }.environmentObject(RecipeModel())
     }
 }
 
