@@ -36,9 +36,13 @@ class DataService{
                 //this loop is only used to be able to assign items in the array to a list, using id's.
                 for r in recipeData{
                     r.id = UUID()
-                    
-                }
+                
+                //add unique id to ingredients, which is a part of recipeData(r)
+                for i in r.ingredients{
+                        i.id = UUID()
                // this returns the json recipe data into the [Recipe] array if no problems occur.
+                }
+            }
                 return recipeData
             }
             //catch will display which error happened (a nil error from the url, or a nil error from the decoding of json to array.
