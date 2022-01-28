@@ -30,21 +30,21 @@ struct RecipeFeaturedView: View {
                     .aspectRatio( contentMode: .fill)
                     .clipped()
                    
-                    Text(model.recipes[index].name).padding().font(.title)
-                    VStack(alignment: .leading){
-                        Text("Prep Time: ")
-                            .font(.headline)
-                            .padding(.bottom, 5.0)
-                            
-                        Text(model.recipes[index].prepTime).padding(.bottom, 5.0)
-                    Text("Fucking tasty shit")
-                    }
-                    .padding(.trailing, 200.0)
+                   
                 }
             
             
-            }.frame(width: geo.size.width * 9 / 10, height: geo.size.height * 3 / 4, alignment: .center).shadow(radius: 15).cornerRadius(10)
-                   
+            }.frame(width: geo.size.width * 9 / 10, height: geo.size.height * 3 / 5, alignment: .center).shadow(radius: 15).cornerRadius(10)
+                        Text(model.recipes[index].name).padding().font(.title)
+                        VStack(alignment: .leading){
+                            Text("Prep Time: ")
+                                .font(.headline)
+                                .padding(.bottom, 5.0)
+                                
+                            Text(model.recipes[index].prepTime).padding(.bottom, 5.0)
+                        Text("Fucking tasty shit")
+                        }
+                        .padding(.trailing, 200.0)
             }
                 }
             }
