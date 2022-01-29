@@ -34,7 +34,7 @@ struct RecipeFeaturedView: View {
                 }
             
             
-            }.frame(width: geo.size.width * 9 / 10, height: geo.size.height * 3 / 5, alignment: .center).shadow(radius: 15).cornerRadius(10)
+            }.frame(width: geo.size.width * 9 / 10, height: geo.size.height * 3 / 5, alignment: .center).cornerRadius(10).shadow(radius: 15)
                         Text(model.recipes[index].name).padding().font(.title)
                         VStack(alignment: .leading){
                             Text("Prep Time: ")
